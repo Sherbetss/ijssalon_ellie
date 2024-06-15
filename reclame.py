@@ -3,7 +3,11 @@ from algemene_functies import mijn_functie_2
 def aanbieding_1(smaak, prijs, korting):
 
   return prijs * (1 - korting)
+  korting_bedrag = prijs * korting
+  prijs_met_korting = prijs - korting_bedrag
+  return f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {smaak}, van {prijs} euro voor {prijs_met_korting:.2f} euro."
 
+print(aanbieding_1("aardbei", 4, 0.1))
 def inkomsten_totaal(inkomsten, btw=0):
 
   totaal = sum(inkomsten)
